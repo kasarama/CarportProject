@@ -1,117 +1,43 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: miade
-  Date: 20-04-2020
-  Time: 08:50
-  To change this template use File | Settings | File Templates.
---%>
-
+<%@ page import="CarportUtil.Initializer" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="../includes/header.inc"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@include file="../includes/header.inc" %>
+<%
+    //if i'm the first user on this application, then set the flatMaterialList. (else the list already exists)
+    if (request.getServletContext().getAttribute("flatMaterialList") == null) {
+        System.out.println("initializing materiallist");
+        //}
+        request.getServletContext().setAttribute("flatMaterialList", Initializer.getFlatRoofMateriallist());
+    }
+%>
 
-<div class="col-md-2 school-options-dropdown text-center">
-    <div class="form-group">
-        <label>Vælg længde:</label>
-        <select name="length" class="form-control">
-            <option selected disabled>Vælg længde</option>
-            <option value="1">240</option>
-            <option value="2">270</option>
-            <option value="3">300</option>
-            <option value="4">330</option>
-            <option value="5">360</option>
-            <option value="6">390</option>
-            <option value="7">420</option>
-            <option value="8">450</option>
-            <option value="9">480</option>
-            <option value="10">510</option>
-            <option value="11">540</option>
-            <option value="12">570</option>
-            <option value="13">600</option>
-            <option value="14">630</option>
-            <option value="15">660</option>
-            <option value="16">690</option>
-            <option value="17">720</option>
-            <option value="18">750</option>
-            <option value="19">780</option>
-        </select>
-    </div>
-</div>
+<div class="container2">
+    <div class="col-md-12">
+        <form name="designflatroof" action="FrontController" method="post">
+            <input type="hidden" name="target" value="designflatroof">
+            <br>
+            <br>
+            <h2>Fladt tag design</h2>
+            <label class="mt-3" for="flatroof"> Vælg tagdækning for fladt tag:</label>
+            <select class="form-control mt-3" name="flatroof" id="flatroof">
+                <option selected disabled>Vælg tagdækning</option>
+                <c:forEach var="roofMaterial" items="${applicationScope.flatMaterialList}">
+                    <option value="${roofMaterial.id}">${roofMaterial.name}</option>
+                </c:forEach>
+            </select>
 
-<div class="col-md-2 school-options-dropdown text-center">
-    <div class="form-group">
-        <label>Vælg bredde:</label>
-        <select name="width" class="form-control">
-            <option selected disabled>Vælg bredde</option>
-            <option value="1">240</option>
-            <option value="2">270</option>
-            <option value="3">300</option>
-            <option value="4">330</option>
-            <option value="5">360</option>
-            <option value="6">390</option>
-            <option value="7">420</option>
-            <option value="8">450</option>
-            <option value="9">480</option>
-            <option value="10">510</option>
-            <option value="11">540</option>
-            <option value="12">570</option>
-            <option value="13">600</option>
-            <option value="14">630</option>
-            <option value="15">660</option>
-            <option value="16">690</option>
-            <option value="17">720</option>
-            <option value="18">750</option>
-        </select>
-    </div>
-</div>
+            <br>
+            <a class="mt-3 btn btn-dark" href="FrontController?target=redirect&destination=overlay" role="button">Videre til beklædning</a>
+        </form>
+        <!-- End of form -->
 
-<div class="col-md-2 school-options-dropdown text-center">
-    <div class="form-group">
-        <label>Vælg tag:</label>
-        <select name="roof" class="form-control">
-            <option selected disabled>Vælg tag</option>
-            <option value="1">Plasttrapezplader</option>
-        </select>
-    </div>
-</div>
-
-<div class="col-md-2 school-options-dropdown text-center">
-    <div class="form-group">
-        <label>Redskabsskur:</label>
-        <select name="shedsize" class="form-control">
-            <option selected disabled>Ønsker ikke redskabsskur</option>
-            <option value="1">Fuld bredde</option>
-            <option value="1">Halv bredde</option>
-        </select>
-
-        <label>Redskabsskur dybde:</label>
-        <select name="sheddepth" class="form-control">
-            <option selected disabled>Ønsker ikke redskabsskur</option>
-            <option value="1">150</option>
-            <option value="2">180</option>
-            <option value="3">210</option>
-            <option value="4">240</option>
-            <option value="5">270</option>
-            <option value="6">300</option>
-            <option value="7">330</option>
-            <option value="8">360</option>
-            <option value="9">390</option>
-            <option value="10">420</option>
-            <option value="11">450</option>
-            <option value="12">480</option>
-            <option value="13">510</option>
-            <option value="14">540</option>
-            <option value="15">570</option>
-            <option value="16">600</option>
-            <option value="17">630</option>
-            <option value="18">760</option>
-        </select>
+        <form name="startOver" action="FrontController" method="POST">
+            <input type="hidden" name="target" value="newrequest">
+            <input class="mt-3 mb-4 btn btn-outline-dark" type="submit" name="newrequest" value="Start forfra">
+        </form>
     </div>
 </div>
 
 
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 <%@include file="../includes/footer.inc"%>

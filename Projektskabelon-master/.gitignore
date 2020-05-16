@@ -10,8 +10,10 @@
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
+.idea/**/compiler.xml
 .idea/**/dictionaries
 .idea/**/shelf
+src/**/Connector.java
 
 # Generated files
 .idea/**/contentModel.xml
@@ -85,6 +87,7 @@ fabric.properties
 ## ignoring target file
 target/
 
+
 ### macOS ###
 # General
 .DS_Store
@@ -149,4 +152,83 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+
 # End of https://www.gitignore.io/api/maven,macos,windows,java-web,intellij# Created by .ignore support plugin (hsz.mobi)
+
+src/main/webapp/images/uncategorized/
+src/main/java/CarportUtil/
+src/main/java/DBAccess/OrderMapper.java
+src/main/java/FunctionLayer/Construction.java
+src/main/java/FunctionLayer/ConstructionMaterialCalculator.java
+src/main/java/FunctionLayer/ConstructionSizeCalculator.java
+src/main/java/FunctionLayer/Economy.java
+src/main/java/FunctionLayer/Order.java
+src/main/java/FunctionLayer/OverlayMaterialCalculator.java
+src/main/java/FunctionLayer/OverlaySizeCalculator.java
+src/main/java/FunctionLayer/PitchedRoofMaterialCalculator.java
+src/main/java/FunctionLayer/Roof.java
+src/main/java/FunctionLayer/RoofFlat.java
+src/main/java/FunctionLayer/RoofMaterialCalculator.java
+src/main/java/FunctionLayer/RoofPitched.java
+src/main/java/FunctionLayer/RoofSizing.java
+src/main/java/FunctionLayer/Svg.java
+src/main/java/FunctionLayer/Wall.java
+src/main/java/FunctionLayer/WallBuilder.java
+src/main/java/PresentationLayer/AddMaterial.java
+src/main/java/PresentationLayer/CarportBase.java
+src/main/java/PresentationLayer/Drawing.java
+src/main/java/PresentationLayer/EditOrderPrices.java
+src/main/java/PresentationLayer/FindMaterial.java
+src/main/java/PresentationLayer/FlatRoof.java
+src/main/java/PresentationLayer/ItemList.java
+src/main/java/PresentationLayer/Materials.java
+src/main/java/PresentationLayer/Overlay.java
+src/main/java/PresentationLayer/PitchedRoof.java
+src/main/java/PresentationLayer/SendNewOffer.java
+src/main/java/PresentationLayer/SendNewRequest.java
+src/main/java/PresentationLayer/StartRequestOver.java
+src/main/java/PresentationLayer/Validate.java
+src/main/webapp/WEB-INF/addmaterial.jsp
+src/main/webapp/WEB-INF/carportBase.jsp
+src/main/webapp/WEB-INF/customerChoiceResult.jsp
+src/main/webapp/WEB-INF/drawing.jsp
+src/main/webapp/WEB-INF/itemList.jsp
+src/main/webapp/WEB-INF/login.jsp
+src/main/webapp/WEB-INF/newRequests.jsp
+src/main/webapp/WEB-INF/overlay.jsp
+src/main/webapp/WEB-INF/paidOrders.jsp
+src/main/webapp/WEB-INF/prepareOffer.jsp
+src/main/webapp/WEB-INF/sentOffers.jsp
+src/main/webapp/WEB-INF/validateRequest.jsp
+src/main/webapp/images/FogLogo.png
+src/main/webapp/images/baggrund.png
+src/main/webapp/images/baggrund2.png
+src/main/webapp/images/baggrund3.png
+src/main/webapp/images/flatroofdemo.gif
+src/main/webapp/images/header.JPG
+src/main/webapp/images/logo.png
+src/main/webapp/images/overlay/
+src/main/webapp/images/overlayMaterial/
+src/main/webapp/images/pencil-blueprint-595986.jpg
+src/main/webapp/images/pencil-blueprint-5959862.jpg
+src/main/webapp/images/pitchedroofdemo.gif
+src/main/webapp/images/trlast.png
+src/main/webapp/images/verstTilHjemmeside.png
+src/main/webapp/images/verstTilHjemmeside2.png
+src/main/webapp/includes/indexLoginHeader.inc
+src/main/webapp/svg/
+src/test/java/CarportUtil/
+src/test/java/FunctionLayer/ConstructionMaterialCalculatorTest.java
+src/test/java/FunctionLayer/ConstructionSizeCalculatorTest.java
+src/test/java/FunctionLayer/EconomyTest.java
+src/test/java/FunctionLayer/LogicFacadeTest.java
+src/test/java/FunctionLayer/MaterialTest.java
+src/test/java/FunctionLayer/OverlayMaterialCalculatorTest.java
+src/test/java/FunctionLayer/OverlaySizeCalculatorTest.java
+src/test/java/FunctionLayer/PitchedRoofMaterialCalculatorTest.java
+src/test/java/FunctionLayer/RoofFlatTest.java
+src/test/java/FunctionLayer/RoofMaterialCalculatorTest.java
+src/test/java/FunctionLayer/RoofSizingTest.java
+src/test/java/FunctionLayer/WallBuilderTest.java
+src/test/java/PresentationLayer/
